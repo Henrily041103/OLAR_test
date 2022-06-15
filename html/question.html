@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olar</title>
+    <link href="..\Bootstraps\node_modules\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+    <link href="..\css\question_styles.css" rel="stylesheet">
+    <link rel="icon" href="..\assets\logo\A+.png">
+    <script src="..\others\jQuery\node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="..\Bootstraps\node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+    <script src="..\js\question_script.js"></script>
+  </head>
+
+  <header>
+
+    <span class="row">
+      <span class="col-sm-2" id="h">
+        <span>
+          <img src="../assets/logo/Logo Olar 2.png" alt="olar logo" class="logo">
+        </span>
+      </span>
+      
+      <span class="col-sm-4" id="h">
+        <span>
+          <input type="text" id="search_terms" class="form-control">
+        </span>
+      </span>
+      
+      <span class="col-sm-3" id="h">
+        <span class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="notifs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            bell
+          </button>
+          <span class="dropdown-menu" aria-labelledby="notifs">
+            <a class="dropdown-item" href="">There is no more notifications.</a>
+          </span>
+        </span>
+      </span>
+
+      <span class="col-sm-3" id="h">
+        <span>
+          <span class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="user_options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              User
+            </button>
+          </span>
+      
+          <span class="dropdown-menu" aria-labelledby="user_options">
+            <a class="dropdown-item" href="">Log out</a>
+          </span>
+          <span><img src="" alt=""></span>
+        </span>
+      </span>
+    </span>
+  </header>
+  
+  <body>
+    <div class="row">
+    
+      <span class="col-sm-3" id = "filter">
+        <span class="filter_type">
+          <button class="filter_button">Tổng quát</button>
+        </span>
+      </span>
+      
+      <span class="col-sm-7">
+        <div class="question_display">
+          <p>
+            <input type="text" id="question_box" class="form-control">
+          </p>
+    
+          <span class="row" style="margin-top: 5%;">  
+            <span class="col-sm-2">
+              <button id="image_loader" class="image_upload"></button>
+            </span>
+    
+            <span class="col-sm-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="filter_status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                status
+              </button>
+              <span class="dropdown-menu" aria-labelledby="filter_status">
+                <a class="dropdown-item" href="">
+                  <div>Đã trả lời</div>
+                  <div>Chưa trả lời</div>
+                </a>
+              </span>
+            </span>
+    
+            <span class="col-sm-7">
+              <span class="post_holder"><button id="post_button">post</button></span>
+            </span>
+          </span> 
+        </div>
+
+        <div id="question_spawner">
+        </div>
+      </span>
+  
+      <span class="col-sm-2" id="user_status">
+        <div class="question_display">
+          <div><img src="../assets/logo/A+.png" alt="" style="max-height: 20%; max-width: 20%" class="round-image"></div>
+          <p class="user_display">Name</p>
+          <p class="user_display">Email</p>
+          <p class="user_display">Xu</p>
+          <p class="user_display">Vai trò</p>
+        </div>
+      </span>
+    </div>
+  </body>
+  
+  <footer>
+    Copyright 2021, Olar ©, All rights reserved
+  </footer>
+</html>

@@ -1,0 +1,7 @@
+{
+    "accounts" : [
+        {"username":"anhmonk", "password":"12345678", "type":"user"},
+        {"username":"aa", "password":"12345678", "type":"admin"},
+        {"username":"bb", "password":"12345678", "type":"provider"}
+    ]
+}
