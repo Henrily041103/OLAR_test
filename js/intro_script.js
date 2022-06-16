@@ -1,4 +1,4 @@
-import account_validator from "account_validator.js";
+import account_validator from "./js/account_validator.js";
 
 document.addEventListener("DOMContentLoaded", 
     function (event) 
