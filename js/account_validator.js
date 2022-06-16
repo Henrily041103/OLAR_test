@@ -26,9 +26,9 @@ export class acc_manager {
     #acc_list = new Array<account>(accs.length);
 
     constructor() {
-        var placeholder = JSON.parse(accs.accounts);
+        var account_list = JSON.parse(accs.accounts);
         for (var i = 0; i<accs.length;i++) {
-            this.#acc_list = account(placeholder[i].username, placeholder[i].password, placeholder[i].type);
+            this.#acc_list = account(account_list[i].username, account_list[i].password, account_list[i].type);
         }
     }
 
@@ -39,5 +39,18 @@ export class acc_manager {
             }
         }
         return false;
+    }
+
+    checkDuplicate(u, p) {
+        for (var stored_acc in this.#acc_list) {
+            if ((u == stored_acc.#username) && (p == stored_acc.#password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    addNewAccount(u, p) {
+
     }
 }

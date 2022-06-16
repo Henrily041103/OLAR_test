@@ -46,6 +46,17 @@ document.addEventListener("DOMContentLoaded",
                 console.log("NO");
             }
         }
+        function confirmSignup() {
+            var u = signup_email.value;
+            var p = signup_password.value;
+            var r = signup_reenter.value;
+            
+            if (p === r) {
+                if (checkDuplicate(u, p)) {
+                    addNewAccount(u, p);
+                }
+            }
+        }
 
         window.onclick = function(event) {
             
@@ -67,7 +78,7 @@ document.addEventListener("DOMContentLoaded",
         signup_close.addEventListener("click", closeSignup);
 
         login_confirm.addEventListener("click", confirmLogin);
-        
+        signup_confirm.addEventListener("click", confirmSignup);
     })
 
     
