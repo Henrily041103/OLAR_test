@@ -1,4 +1,4 @@
-import account_validator from "./js/account_validator.js";
+import account_validator from "https://combinatronics.com/Henrily041103/OLAR_test/main/js/account_validator.js";
 
 document.addEventListener("DOMContentLoaded", 
     function (event) 
