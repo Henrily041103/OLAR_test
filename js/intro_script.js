@@ -38,9 +38,10 @@ document.addEventListener("DOMContentLoaded",
         function confirmLogin() {
             var u = login_email.value;
             var p = login_password.value;
+            console.log("u: " + u + ", p: " + p);
 
             if (validator.isValidAccount(u, p)) {
-                window.location.replace("https://www.reddit.com/r/manga/comments/vans07/disc_ruridragon_chapter_1/");
+                console.log("YES");
             }
             else {
                 console.log("NO");
@@ -51,23 +52,20 @@ document.addEventListener("DOMContentLoaded",
             var p = signup_password.value;
             var r = signup_reenter.value;
             
-            if (p === r) {
-                if (checkDuplicate(u, p)) {
-                    addNewAccount(u, p);
+            if (p == r) {
+                if (!validator.checkDuplicate(u, p)) {
+                    validator.addNewAccount(u, p);
                 }
             }
         }
 
         window.onclick = function(event) {
-            
-            if ((event.target != login_window) && (login_window.style.display == "flex") 
-            && (event.target != login_button)) 
+            if (event.target.closest("#login_window")== null && event.target != login_button) 
             {
                 closeLogin();
             }
 
-            if ((event.target != signup_window) && (signup_window.style.display == "flex") 
-            && (event.target != signup_button)) 
+            if (event.target.closest("#signup_window")== null && event.target != signup_button) 
             {
                 closeSignup();
             }

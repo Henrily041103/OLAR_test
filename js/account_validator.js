@@ -19,17 +19,17 @@ class account {
 }
 
 export class acc_manager {
-    acc_list = new Array<account>(accs.length);
+    acc_list = Array(accs.accounts.length);
 
     constructor() {
         var account_list = accs.accounts;
-        for (var i = 0; i<accs.length;i++) {
-            this.acc_list = account(account_list[i].username, account_list[i].password, account_list[i].type);
+        for (var i = 0; i<accs.accounts.length;i++) {
+            this.acc_list[i] = new account(account_list[i].username, account_list[i].password, account_list[i].type);
         }
     }
 
     isValidAccount(u, p) {
-        for (var stored_acc in this.acc_list) {
+        for (var stored_acc of this.acc_list) {
             if ((u == stored_acc.username) && (p == stored_acc.password)) {
                 return true;
             }
@@ -47,6 +47,6 @@ export class acc_manager {
     }
 
     addNewAccount(u, p) {
-
+        console.log("lol");
     }
 }
