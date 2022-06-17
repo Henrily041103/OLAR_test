@@ -1,4 +1,10 @@
-import accs from  "../test_acc/acc.json";
+let accs = {
+    "accounts" : [
+        {"username":"anhmonk", "password":"12345678", "type":"user"},
+        {"username":"aa", "password":"12345678", "type":"admin"},
+        {"username":"bb", "password":"12345678", "type":"provider"}
+    ]
+}
 
 class account {
     username;
@@ -16,7 +22,7 @@ export class acc_manager {
     acc_list = new Array<account>(accs.length);
 
     constructor() {
-        var account_list = JSON.parse(accs.accounts);
+        var account_list = accs.accounts;
         for (var i = 0; i<accs.length;i++) {
             this.acc_list = account(account_list[i].username, account_list[i].password, account_list[i].type);
         }
