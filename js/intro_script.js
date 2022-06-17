@@ -1,9 +1,9 @@
-import account_validator from "../js/account_validator.js";
+import acc_manager from "../js/account_validator.js";
 
 document.addEventListener("DOMContentLoaded", 
     function (event) 
     {
-        var validator = new account_validator();
+        var validator = new acc_manager();
 
         var login_window = document.getElementById('login_window');
         var login_button = document.getElementById("login");
