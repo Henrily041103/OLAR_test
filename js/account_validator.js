@@ -1,4 +1,4 @@
-import accs from  "https://combinatronics.com/Henrily041103/OLAR_test/main/test_acc/acc.json";
+import accs from  "../test_acc/acc.json";
 
 class account {
     username;
