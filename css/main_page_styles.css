@@ -47,17 +47,22 @@ header{
     max-width: 80%;
 }
 #content_container {
-    margin-top: 5%;
+    margin-top: 7.5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .modes{
     border: none;
     background-color: rgb(246, 249, 254);
-    color: blue;
+    color: rgb(0, 85, 212);
     width: 100%;
+    font-weight: bold;
 }
 .modes:focus {
     font-size: 110%;
+    border: 5%;
+    border-color: rgb(251, 191, 36);
 }
 .main_content {
     display: none;
@@ -68,6 +73,9 @@ header{
     border-radius: 40%;
 }
 .highlight_text {
-    color: blue;
+    color: rgb(0, 85, 212);
     font-weight: bold;
+}
+.title{
+    color: rgb(0, 85, 212);
 }

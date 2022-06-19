@@ -1,5 +1,5 @@
-export async function fetchJSON() {
-    var response = await fetch("../test_acc/acc.json", {
+export async function fetchJSON(url) {
+    var response = await fetch(url, {
         headers: {
           'Accept': 'application/json'
         }
@@ -7,8 +7,8 @@ export async function fetchJSON() {
     return response.json();
 }
 
-export async function writeToJSON(content) {
-  var response = await fetch("../test_acc/acc.json", {
+export async function writeToJSON(content, url) {
+  var response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,4 +24,14 @@ export function getSiblings (element) {
     if ((value != element)) return value;
   })
   return siblings;
+}
+
+export async function fetchHTML(url) {
+  var response = await fetch(url, {
+    headers: {
+      'Accept': 'text/html'
+    }
+  });
+  response = await response.text();
+  return response;
 }

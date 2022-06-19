@@ -1,4 +1,4 @@
-import {fetchJSON} from "./utils.js";
+import {fetchJSON} from "../utils.js";
 class account {
     username;
     password;
@@ -11,7 +11,7 @@ class account {
     }
 }
 
-const accs = await fetchJSON();
+const accs = await fetchJSON("../test_acc/acc.json");
 
 export class acc_manager {
     acc_list = Array(accs.accounts.length);

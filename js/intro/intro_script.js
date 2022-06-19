@@ -1,4 +1,5 @@
 import {acc_manager} from "./account_manager.js";
+import { writeToJSON } from "../utils.js";
 
 var validator = new acc_manager();
 
@@ -40,7 +41,9 @@ if (document.readyState !== "loading") {
             console.log("u: " + u + ", p: " + p);
 
             if (validator.isValidAccount(u, p)) {
-                console.log("YES");
+                var inp = {username: u, password: p, type: "user"};
+                writeToJSON(inp, "../test_acc/current_acc.json");
+                window.location.href("../homepage.html");
             }
             else {
                 console.log("NO");
