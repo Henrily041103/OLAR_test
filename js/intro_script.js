@@ -1,9 +1,8 @@
-import {acc_manager} from "../js/account_validator.js";
+import {acc_manager} from "./account_manager.js";
 
-document.addEventListener("DOMContentLoaded", 
-    function (event) 
-    {
-        var validator = new acc_manager();
+var validator = new acc_manager();
+
+if (document.readyState !== "loading") {
 
         var login_window = document.getElementById('login_window');
         var login_button = document.getElementById("login");
@@ -77,7 +76,9 @@ document.addEventListener("DOMContentLoaded",
 
         login_confirm.addEventListener("click", confirmLogin);
         signup_confirm.addEventListener("click", confirmSignup);
-    })
+    
+}
+
 
     
 

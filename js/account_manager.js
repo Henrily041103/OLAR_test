@@ -1,11 +1,4 @@
-let accs = {
-    "accounts" : [
-        {"username":"anhmonk", "password":"12345678", "type":"user"},
-        {"username":"aa", "password":"12345678", "type":"admin"},
-        {"username":"bb", "password":"12345678", "type":"provider"}
-    ]
-}
-
+import {fetchJSON} from "./utils.js";
 class account {
     username;
     password;
@@ -18,8 +11,11 @@ class account {
     }
 }
 
+const accs = await fetchJSON();
+
 export class acc_manager {
     acc_list = Array(accs.accounts.length);
+    
 
     constructor() {
         var account_list = accs.accounts;
@@ -38,7 +34,7 @@ export class acc_manager {
     }
 
     checkDuplicate(u, p) {
-        for (var stored_acc in this.acc_list) {
+        for (var stored_acc of this.acc_list) {
             if ((u == stored_acc.username) && (p == stored_acc.password)) {
                 return true;
             }
@@ -47,6 +43,6 @@ export class acc_manager {
     }
 
     addNewAccount(u, p) {
-        console.log("lol");
+        var inp = {username: u, password: p, type: "user"};
     }
 }

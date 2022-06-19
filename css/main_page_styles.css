@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(246, 249, 254);
+    font-size: large;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header{
+    box-shadow: 5px 5px 3px gainsboro;
+    padding: 2%;
+    background-color: white;
+}
+
+#main {
+    margin-top: 5%;
+}
+
+#header_logo {
+    max-width: 50%;
+    text-align: left;
+}
+#search_bar {
+    background-color: rgb(243, 244, 246);
+}
+#notifs, #options {
+    border: none;
+    background-color: white;
+}
+#user_info {
+    border-radius: 10%;
+    background-color: white;
+    box-shadow: 5px 5px 3px gainsboro;
+    overflow-wrap: break-word;
+    max-height: 250px;
+}
+#tutor_start {
+    color: white;
+    font-weight: bold;
+    border-radius: 20%;
+    background-color: rgb(251, 191, 36);
+    font-size: larger;
+    padding: 2%;
+    border: none;
+}
+#notifs_content, #options_content {
+    max-width: 80%;
+}
+#content_container {
+    margin-top: 5%;
+}
+
+.modes{
+    border: none;
+    background-color: rgb(246, 249, 254);
+    color: blue;
+    width: 100%;
+}
+.modes:focus {
+    font-size: 110%;
+}
+.main_content {
+    display: none;
+}
+.user_avatar {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 40%;
+}
+.highlight_text {
+    color: blue;
+    font-weight: bold;
+}
