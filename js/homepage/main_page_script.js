@@ -1,4 +1,4 @@
-import { getSiblings, fetchJSON } from "../utils.js";
+import { getSiblings} from "../utils.js";
 import {content_manager } from "./content_loader.js";
 
 if (document.readyState !== "loading"){

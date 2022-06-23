@@ -40,7 +40,7 @@ if (document.readyState !== "loading") {
 
             if (validator.isValidAccount(u, p)) {
                 var inp = {"username":u, "password":p, "type":"user"};
-                document.cookie = JSON.stringify(inp) + ";path=/homepage";
+                document.cookie = JSON.stringify(inp);
                 window.location.assign("../html/homepage.html");
             }
             else {
