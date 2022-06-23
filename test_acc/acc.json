@@ -1,7 +1,7 @@
 {
     "accounts" : [
-        {"username":"anhmonk@mail.vn", "password":"z<mn=78]:3tZVW5_", "type":"user"},
-        {"username":"aa@mail.nd", "password":"h!HBnk^6*M,5*b5r", "type":"admin"},
-        {"username":"bb@pmail.of", "password":"~uU]8d`'qrb9ng.L", "type":"provider"}
+        {"username":"anhmonk", "password":"12345678", "type":"user"},
+        {"username":"aa", "password":"12345678", "type":"admin"},
+        {"username":"bb", "password":"12345678", "type":"provider"}
     ]
 }
