@@ -12,6 +12,20 @@ header{
     background-color: white;
 }
 
+footer {
+    background-color: white;
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1.5%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+input {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 #main {
     margin-top: 5%;
 }
@@ -51,7 +65,16 @@ header{
     margin-left: 10%;
     margin-right: 10%;
 }
+#tutor_table {
+    min-width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
+.tutor_title {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 .modes{
     border: none;
     background-color: rgb(246, 249, 254);

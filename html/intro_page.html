@@ -13,6 +13,7 @@
     <script type="module" src="../js/utils.js"></script>
     <script type="module" src="../js/intro/account_manager.js"></script>
     <script type="module" src="../js/intro/intro_script.js"></script>
+    <script src="../js/login_handler.js" type="module"></script>
   </head>
   
   <body>
@@ -121,25 +122,27 @@
             <span> <img src="../assets/logo/Logo Olar 2.png" alt="logo" id="login_logo"></span>
             <span><button type="button" class="btn btn-primary" id="close1">X</button></span>
           </p>
-          <p class="row">
+          <!-- <p class="row">
             <span class="col-sm-6">
               <button type="button" class="btn btn-outline-primary" class="inner_login">Đăng nhập</button>
             </span>
             <span class="col-sm-6">
               <button type="button" class="btn btn-outline-primary" class="inner_signup">Đăng ký</button>
             </span>
-          </p>
+          </p> -->
           
-            <div>
-              <label for="email_login" class="form-label">Email:</label>
-              <input type="email" id="email_login" class="form-control">
-            </div>
-            <div>
-              <label for="password_login" class="form-label">Password:</label>
-              <input type="password" id="password_login" class="form-control">
-            </div>
+            <form method="post" id="login_form">
+              <div>
+                <label for="email_login" class="form-label">Email:</label>
+                <input type="email" id="email_login" class="form-control">
+              </div>
+              <div>
+                <label for="password_login" class="form-label">Password:</label>
+                <input type="password" id="password_login" class="form-control">
+              </div>
+              <div><button type="submit" class="btn btn-primary" id="confirm1">Đăng Nhập</button></div>
+            </form>
             
-          <p><button type="submit" class="btn btn-primary" id="confirm1">Đăng Nhập</button></p>
           <p><a href="">Quên mật khẩu?</a></p>
         </div>
       </div>
@@ -149,31 +152,33 @@
       <div class="modal-content">
         <span> <img src="../assets/logo/Logo Olar 2.png" alt="logo" id="login_logo"></span>
         <span><button type="button" class="btn btn-primary" id="close2">X</button></span>
-        <p class="row">
+        <!-- <p class="row">
           <span class="col-sm-6">
             <button type="button" class="btn btn-outline-primary" class="inner_login">Đăng nhập</button>
           </span>
           <span class="col-sm-6">
             <button type="button" class="btn btn-outline-primary" class="inner_signup">Đăng ký</button>
           </span>
-        </p>
+        </p> -->
         
         <p class="user_signup">Bạn là User?</p>
-          <div>
-            <label for="email_signup" class="form-label">Email:</label>
-            <input type="email" id="email_signup" class="form-control">
-          </div>
-          <div>
-            <label for="password_signup" class="form-label">Password:</label>
-            <input type="password" id="password_signup" class="form-control">
-          </div>
-          <div>
-            <label for="re_enter" class="form-label">Retype Password:</label>
-            <input type="password" id="re_enter" class="form-control">
-          </div>
+          <form action="../js/controller.js" method="post" id="signup_form">
+            <div>
+              <label for="email_signup" class="form-label">Email:</label>
+              <input type="email" id="email_signup" class="form-control">
+            </div>
+            <div>
+              <label for="password_signup" class="form-label">Password:</label>
+              <input type="password" id="password_signup" class="form-control">
+            </div>
+            <div>
+              <label for="re_enter" class="form-label">Retype Password:</label>
+              <input type="password" id="re_enter" class="form-control">
+            </div>
+            <p><button type="submit" class="btn btn-primary" id="confirm2">Đăng Ký</button></p>
+          </form>
         </p>
-
-        <p><button type="submit" class="btn btn-primary" id="confirm2">Đăng Ký</button></p>
+        
         <p class="provider_signup">Bạn là Provider?</p>
         <p><a href="https://forms.gle/pwEWq9zs4f6ogEqW6">Đăng ký tại đây</a></p>
       </div>

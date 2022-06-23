@@ -4,6 +4,7 @@ export async function fetchJSON(url) {
           'Accept': 'application/json'
         }
     });
+    console.log(response)
     return response.json();
 }
 

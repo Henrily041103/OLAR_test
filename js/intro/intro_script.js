@@ -1,5 +1,5 @@
 import {acc_manager} from "./account_manager.js";
-import { writeToJSON } from "../utils.js";
+import { writeToJSON, fetchJSON} from "../utils.js";
 
 var validator = new acc_manager();
 
@@ -10,7 +10,7 @@ if (document.readyState !== "loading") {
         var login_close = document.getElementById("close1");
         var login_email = document.getElementById("email_login");
         var login_password = document.getElementById("password_login");
-        var login_confirm = document.getElementById("confirm1");
+        var login_form = document.getElementById("login_form")
         
         var signup_window = document.getElementById('signup_window');
         var signup_button = document.getElementById("signup");
@@ -18,7 +18,7 @@ if (document.readyState !== "loading") {
         var signup_email = document.getElementById("email_signup");
         var signup_password = document.getElementById("password_signup");
         var signup_reenter = document.getElementById("re_enter")
-        var signup_confirm = document.getElementById("confirm2");
+        var signup_form = document.getElementById("signup_form");
         
         function closeLogin() {
             login_window.style.display = "none";
@@ -41,12 +41,16 @@ if (document.readyState !== "loading") {
             console.log("u: " + u + ", p: " + p);
 
             if (validator.isValidAccount(u, p)) {
-                var inp = {username: u, password: p, type: "user"};
-                writeToJSON(inp, "../test_acc/current_acc.json");
-                window.location.href("../homepage.html");
+                return true;
+                //window.location.href("../homepage.html");
             }
             else {
                 console.log("NO");
+                var inp = {username: u, password: p, type: "user"};
+                writeToJSON(inp, "../test_acc/current_acc.json");
+                fetchJSON("../test_acc/current_acc.json")
+                .then((res) => (console.log(res)));
+                return false;
             }
         }
         function confirmSignup() {
@@ -77,9 +81,8 @@ if (document.readyState !== "loading") {
         signup_button.addEventListener("click", displaySignup);
         signup_close.addEventListener("click", closeSignup);
 
-        login_confirm.addEventListener("click", confirmLogin);
-        signup_confirm.addEventListener("click", confirmSignup);
-    
+        login_form.onsubmit = confirmLogin;
+        signup_form.onsubmit = confirmSignup;
 }
 
 
