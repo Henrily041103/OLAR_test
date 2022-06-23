@@ -1,5 +1,4 @@
 import {acc_manager} from "./account_manager.js";
-import { writeToJSON } from "../utils.js";
 
 var validator = new acc_manager();
 
@@ -10,7 +9,7 @@ if (document.readyState !== "loading") {
         var login_close = document.getElementById("close1");
         var login_email = document.getElementById("email_login");
         var login_password = document.getElementById("password_login");
-        var login_confirm = document.getElementById("confirm1");
+        var login_form = document.getElementById("login_form")
         
         var signup_window = document.getElementById('signup_window');
         var signup_button = document.getElementById("signup");
@@ -18,7 +17,7 @@ if (document.readyState !== "loading") {
         var signup_email = document.getElementById("email_signup");
         var signup_password = document.getElementById("password_signup");
         var signup_reenter = document.getElementById("re_enter")
-        var signup_confirm = document.getElementById("confirm2");
+        var signup_form = document.getElementById("signup_form");
         
         function closeLogin() {
             login_window.style.display = "none";
@@ -38,12 +37,11 @@ if (document.readyState !== "loading") {
         function confirmLogin() {
             var u = login_email.value;
             var p = login_password.value;
-            console.log("u: " + u + ", p: " + p);
 
             if (validator.isValidAccount(u, p)) {
-                var inp = {username: u, password: p, type: "user"};
-                writeToJSON(inp, "../test_acc/current_acc.json");
-                window.location.href("../homepage.html");
+                var inp = {"username":u, "password":p, "type":"user"};
+                document.cookie = JSON.stringify(inp);
+                window.location.assign("../html/homepage.html");
             }
             else {
                 console.log("NO");
@@ -77,12 +75,18 @@ if (document.readyState !== "loading") {
         signup_button.addEventListener("click", displaySignup);
         signup_close.addEventListener("click", closeSignup);
 
-        login_confirm.addEventListener("click", confirmLogin);
-        signup_confirm.addEventListener("click", confirmSignup);
-    
-}
+        login_form.addEventListener('submit', event => {
+            // submit event detected
+            event.preventDefault();
+            confirmLogin();
+          })
 
-
+        signup_form.addEventListener('submit', event => {
+            // submit event detected
+            event.preventDefault();
+            confirmSignup();
+          })
+    }
     
 
     

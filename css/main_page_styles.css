@@ -79,3 +79,12 @@ header{
 .title{
     color: rgb(0, 85, 212);
 }
+
+.form-control {
+    margin:1%
+}
+
+.table{
+    min-width: 30%;
+    min-height: 80%;
+}

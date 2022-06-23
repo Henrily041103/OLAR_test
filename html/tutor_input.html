@@ -4,42 +4,129 @@
     </h2>
 </div>
 
-<div id="tutor_info">
-    <div class="row">
-        <span class="col-sm-7">
-            <input type="text" id="tutor_name" class="form-control" placeholder="Tên">
-        </span>
-        <span class="col-sm-5">
-            <input type="text" id="tutor_age" class="form-control" placeholder="Năm sinh">
-        </span>
+<form method="post" id="tutor_form">
+    <div id="tutor_info">
+        <div class="row">
+            <span class="col-sm-7">
+                <input type="text" id="tutor_name" class="form-control" placeholder="Tên">
+            </span>
+            <span class="col-sm-5">
+                <input type="text" id="tutor_age" class="form-control" placeholder="Năm sinh">
+            </span>
+        </div>
+        <div>
+            <input type="text" id="tutor_school" class="form-control" placeholder="Trường">
+        </div>
+        <div class="row">
+            <span class="col-sm-7">
+                <input type="text" id="tutor_major" class="form-control" placeholder="Chuyên ngành">
+            </span>
+            <span class="col-sm-5">
+                <input type="text" id="tutor_year" class="form-control" placeholder="Năm">
+            </span>
+        </div>
     </div>
-    <div>
-        <input type="text" id="tutor_school" class="form-control" placeholder="Trường">
+    
+    <div class="tutor_title">
+        <h2 class="highlight_text">
+            Yêu cầu về nội dung giảng dạy
+        </h2>
     </div>
-    <div class="row">
-        <span class="col-sm-7">
-            <input type="text" id="tutor_major" class="form-control" placeholder="Chuyên ngành">
-        </span>
-        <span class="col-sm-5">
-            <input type="text" id="tutor_year" class="form-control" placeholder="Năm">
-        </span>
+    
+    <div id="tutor_reqs">
+        <div><input type="text" id="tutor_subject" class="form-control" placeholder="Môn học"></div>
+        <div><input type="text" id="tutor_fromchap" class="form-control" placeholder="Từ chương"></div>
+        <div><input type="text" id="tutor_tochap" class="form-control" placeholder="Đến chương"></div>
     </div>
-</div>
+    
+    <div class="tutor_title">
+        <h2 class="highlight_text">
+            Thời gian & địa điểm
+        </h2>
+    </div>
 
-<div class="tutor_title">
-    <h2 class="highlight_text">
-        Yêu cầu về nội dung giảng dạy
-    </h2>
-</div>
+    <div>Hình thức</div>
+    <div id="tutor_place">
+        <p>
+            <input class="form-check-input" type="radio" id="online_radio">
+            <label class="form-check-label" for="online_radio">
+                Online
+        </label>
+        </p>
+        <p>
+            <input class="form-check-input" type="radio" id="offline_radio">
+            <label class="form-check-label" for="offline_radio">
+                Offline
+        </label>
+        </p>
+    </div>
 
-<div id="tutor_reqs">
-    <div><input type="text" id="tutor_subject" class="form-control" placeholder="Môn học"></div>
-    <div><input type="text" id="tutor_fromchap" class="form-control" placeholder="Từ chương"></div>
-    <div><input type="text" id="tutor_tochap" class="form-control" placeholder="Đến chương"></div>
-</div>
+    <div >
+        <table class="table table-striped" id="tutor_time">
+            <thead>
+                <tr>
+                    <th scope="col">Thứ</th>
+                    <th scope="col">Sáng</th>
+                    <th scope="col">Trưa</th>
+                    <th scope="col">Chiều</th>
+                    <th scope="col">Tối</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><input class="form-check-input" type="checkbox" id="mon-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="mon-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="mon-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="mon-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><input class="form-check-input" type="checkbox" id="tue-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="tue-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="tue-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="tue-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><input class="form-check-input" type="checkbox" id="wed-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="wed-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="wed-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="wed-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td><input class="form-check-input" type="checkbox" id="thu-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="thu-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="thu-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="thu-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td><input class="form-check-input" type="checkbox" id="fri-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="fri-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="fri-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="fri-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td><input class="form-check-input" type="checkbox" id="sat-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sat-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sat-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sat-eve"></td>
+                </tr>
+                <tr>
+                    <th scope="row">CN</th>
+                    <td><input class="form-check-input" type="checkbox" id="sun-mor"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sun-noon"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sun-aft"></td>
+                    <td><input class="form-check-input" type="checkbox" id="sun-eve"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-<div class="tutor_title">
-    <h2 class="highlight_text">
-        Thời gian & địa điểm
-    </h2>
-</div>
+    <button type="submit" class="btn btn-primary" id="tutor_confirm">Đăng Ký</button>
+</form>
+
+<script src="../js/homepage/tutor_loader.js"></script>
